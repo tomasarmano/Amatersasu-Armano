@@ -10,7 +10,7 @@ const NavBar = () => {
               <img src={logo} width={80} />
           </div>
           <ul className='categories'>
-            <li>Juegos PS4</li>
+            <li>Juegos</li>
             <li>Figuras</li>
             <li>Mangas</li>
             <li>Posters</li>
