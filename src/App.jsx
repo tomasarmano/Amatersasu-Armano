@@ -1,13 +1,13 @@
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemListContainerWithHoc from './components/ItemListContainer/ItemListContainer'
 
 function App() {
 
   return (
    <>
     <NavBar/>
-    <ItemListContainer />
+    <ItemListContainerWithHoc />
    </>
   )
 }
