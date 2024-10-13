@@ -5,7 +5,8 @@ const products = [
         price: "150" ,
         image: "/img/sz.webp" ,
         stock: "20" ,
-        category: "Juegos" 
+        category: "juegos",
+        description: ""
     },
     {
         id: "mon432" ,
@@ -13,7 +14,8 @@ const products = [
         price: "100" ,
         image: "/img/lg2.jpg" ,
         stock: "28" ,
-        category: "Figuras" 
+        category: "figuras", 
+        description: "Figura de acción de One Piece para niños y adultos, juguetes de dibujos animados japoneses, Luffy Gear 2, 15CM,"
     },
     {
         id: "son654" ,
@@ -21,7 +23,8 @@ const products = [
         price: "50" ,
         image: "/img/jk.webp" ,
         stock: "8" ,
-        category: "Mangas" 
+        category: "mangas", 
+        description: ""
     },
     {
         id: "lna098" ,
@@ -29,7 +32,8 @@ const products = [
         price: "25" ,
         image: "/img/myt.jpg" ,
         stock: "20" ,
-        category: "Posters" 
+        category: "posters",
+        description: "" 
     }
 ]
 
@@ -37,8 +41,17 @@ const getProducts = () => {
     return new Promise ((resolve, reject) => {
         setTimeout( () =>{
             resolve(products)
-        }, 1000)
+        }, 500)
     })
 }
 
-export {getProducts}
+const getProduct = (idProduct) => {
+    return new Promise( (resolve) => {
+        setTimeout( () =>{
+            const product = products.find( (product) => product.id === idProduct )
+            resolve(product)
+        }, 500)
+    })
+}
+
+export {getProducts, getProduct}
