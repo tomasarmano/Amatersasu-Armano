@@ -3,19 +3,29 @@
   padding: 20px;
   align-items: center;
   justify-content: center;
+  gap: 15px;
 }
 .itemlistcontainer .item{
   width: 300px;
   border: 2px solid rgb(0, 0, 0);
   background-color: rgb(24, 24, 24);
+  color: white;
   padding: 20px;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 .itemlistcontainer .item img{
   width: 200px;
   height: 200px;
+}
+.itemlistcontainer .item .text{
+  padding-top: 10px;
+  text-align: center;
+}
+.itemlistcontainer .item .price{
+  padding-top: 7px;
 }

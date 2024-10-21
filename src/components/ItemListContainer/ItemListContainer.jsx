@@ -1,6 +1,6 @@
 import ItemList from "./itemList"
-import "./itemlistcontainer.css"
 import hocFilterProducts from "../../hoc/hocFilterProducts"
+import "./itemlistcontainer.css"
 
 const ItemListContainer = ({ products }) => {
 
