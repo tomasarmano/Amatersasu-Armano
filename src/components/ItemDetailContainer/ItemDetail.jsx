@@ -6,6 +6,8 @@ import './itemdetail.css'
 const ItemDetail = ({ product, addProduct }) => {
   const [currentImage, setCurrentImage] = useState(product.image[0])
 
+  const ItemDetail = ({ product }) => {
+  const [ currentImage, setCurrentImage ] = useState( product.image[0] )
   const images = product.image.filter( (image) => image !== currentImage )
 
   return (
@@ -31,6 +33,6 @@ const ItemDetail = ({ product, addProduct }) => {
       </div>   
     </div>
   )
+  }
 }
-
 export default ItemDetail 

@@ -6,7 +6,6 @@ import { useContext } from "react"
 import { CartContext } from "../../context/CartContext.jsx"
 
 const ItemDetailContainer = () => {
-
     const [product, setProduct] = useState({})
     const { addProductInCart } = useContext(CartContext)
     const [loading, setLoading] = useState(true)
@@ -24,6 +23,14 @@ const ItemDetailContainer = () => {
         .then((data) => setProduct(data))
         .finally(() => setLoading(false))
     },[idProduct]) 
+    useEffect( ()=> {
+    setLoading(true)
+
+    getProduct(idProduct)
+      .then((data)=> setProduct(data) )
+      .finally(()=> setLoading(false))
+  }, [idProduct] )
+ 
 
   return (
     <>
