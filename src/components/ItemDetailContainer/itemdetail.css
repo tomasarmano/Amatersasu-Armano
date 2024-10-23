@@ -1,35 +1,35 @@
 .detail{
-    display: flex;
-    flex-direction: row;
-    margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
 }
-
-.images-detail-container{
+.imagesdetailcontainer{
   display: flex;
   width: 50%;
 }
-.images-detail-container .secondary-images{
+.imagesdetailcontainer .secondary-images{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 40%;
 }
-.images-detail-container .secondary-images img{
+.imagesdetailcontainer .secondary-images img{
   width: 40%;
   margin: 10px 0;
   border-radius: 5px;
 }
-.images-detail-container .main-image{
+.imagesdetailcontainer .main-image{
   width: 60%;
 }
-.images-detail-container .main-image img{
-  width: 90%;
+.imagesdetailcontainer .main-image img{
+  width: 300px;
   border-radius: 5px;
 }
 .itemdetailcontainer{
   align-items: center;
   margin-top: 35px;
   padding-left: 10px;
+  width: 60%;
 }
 .itemdetailcontainer .nombre{
   padding-bottom: 15px;

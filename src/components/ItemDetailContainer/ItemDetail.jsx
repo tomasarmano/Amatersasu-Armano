@@ -1,8 +1,9 @@
 import Back from "./Back"
+import ItemCount from "../ItemCount/ItemCount"
 import { useState } from "react"
 import './itemdetail.css'
 
-const ItemDetail = ({ product }) => {
+const ItemDetail = ({ product, addProduct }) => {
   const [currentImage, setCurrentImage] = useState(product.image[0])
 
   const images = product.image.filter( (image) => image !== currentImage )
@@ -10,11 +11,11 @@ const ItemDetail = ({ product }) => {
   return (
     <div className="detail">
       <Back /> 
-      <div className="images-detail-container">
+      <div className="imagesdetailcontainer">
         <div className="secondary-images">
         {
           images.map( (image)=> (
-            <img src={image} key={image} onClick={ () => setCurrentImage(image) } />
+            <img src={image} key={image} onClick={ ()=> setCurrentImage(image) }/>
           ))
         }
         </div>
@@ -26,6 +27,7 @@ const ItemDetail = ({ product }) => {
         <h2 className="nombre">{product.name}</h2>
         <p className="price">Precio: ${product.price}</p>
         <p className="descripcion">{product.description}</p>
+        <ItemCount stock={product.stock} addProduct={addProduct} />
       </div>   
     </div>
   )

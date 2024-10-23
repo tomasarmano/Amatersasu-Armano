@@ -1,0 +1,26 @@
+.contador {
+    display: flex;
+    padding-left: 5px;
+}
+.contador .agregar-eliminar{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.contador .agregar-eliminar .boton{
+    width: 30px;
+    background-color: white;
+    border-radius: 8px;
+}
+.contador .agregar-eliminar .text{
+    font-size: 20px;
+}
+.contador .agregar{
+    display: flex;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    width: 90px;
+    font-size: 15px;  
+}
