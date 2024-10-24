@@ -1,4 +1,4 @@
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.webp'
 import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom'
 import './navbar.css'

@@ -17,8 +17,18 @@
 .navbar .cartwidget{
     display: flex;
     align-items: center;
+    text-decoration: none;
 }    
 .navbar .cartwidget .number{
     display: flex;
-    padding-left: 10px
+    padding-left: 10px;
+    color: white;
 }
+.cartwidget .icon-cartwidget{
+    font-size: 30px;
+    color: #2ECC71;
+  }
+  .cartwidget .empty-cartwidget{
+    font-size: 30px;
+    color: white;
+  }

@@ -1,26 +1,42 @@
-.contador {
+.contador{
+    width: 200px;
     display: flex;
-    padding-left: 5px;
+    flex-direction: column;
 }
 .contador .agregar-eliminar{
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
-.contador .agregar-eliminar .boton{
-    width: 30px;
-    background-color: white;
-    border-radius: 8px;
+.agregar-eliminar button{
+  width: 40px;
+  height: 40px;
+  background-color: rgb(42, 42, 42);
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
 }
-.contador .agregar-eliminar .text{
-    font-size: 20px;
+.agregar-eliminar button:hover{
+  border: 1px solid #2ECC71;
+  cursor: pointer;
 }
-.contador .agregar{
-    display: flex;
-    border-radius: 4px;
-    background-color: rgb(255, 255, 255);
-    font-weight: bolder;
-    color: rgb(0, 0, 0);
-    width: 90px;
-    font-size: 15px;  
+.agregar-eliminar .menos:hover{
+    border: 1px solid #cc2e2e;
+    cursor: pointer;
+  }
+.agregar-eliminar p{
+  font-weight: bold;
+}
+.agregar{
+  padding: 10px 0;
+  background-color: rgb(42, 42, 42);
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+}
+.agregar:hover{
+  border: 1px solid #2ECC71;
+  color: #2ECC71;
+  cursor: pointer;
 }

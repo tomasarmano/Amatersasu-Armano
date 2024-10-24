@@ -19,11 +19,11 @@ const ItemCount = ({ stock, addProduct }) => {
   return (
     <div className='contador'>
         <div className='agregar-eliminar'>
-            <button className='boton' onClick={handleClickDecrement} >-</button>
-            <p className='text'>{count}</p>
-            <button className='boton' onClick={handleClickIncrement}>+</button>
-            <button className='agregar' onClick={ () => addProduct(count)}>Agregar al Carrito</button>
+            <button className='menos' onClick={handleClickDecrement} >-</button>
+            <p>{count}</p>
+            <button onClick={handleClickIncrement}>+</button>
         </div>
+            <button className='agregar' onClick={ () => addProduct(count)}>Agregar al Carrito</button>
     </div>
   )
 }

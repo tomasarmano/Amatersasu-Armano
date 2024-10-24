@@ -1,0 +1,20 @@
+.header-content {
+    background-image: url(../../../public/img/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.header-content h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: #ff0000;;
+}
+.header-content p{
+    font-size: 20px;
+}

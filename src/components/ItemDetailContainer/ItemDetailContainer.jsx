@@ -6,31 +6,23 @@ import { useContext } from "react"
 import { CartContext } from "../../context/CartContext.jsx"
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState({})
-    const { addProductInCart } = useContext(CartContext)
-    const [loading, setLoading] = useState(true)
-    const { idProduct } = useParams()
+  const [product, setProduct] = useState({})
+  const { addProductInCart } = useContext(CartContext)
+  const [loading, setLoading] = useState(true)
+  const { idProduct } = useParams()
 
-    const addProduct = (count) => {
-      const productCart = { ...product, quantity: count }
-      addProductInCart(productCart)
-    }
+  const addProduct = (count) => {
+    const productCart = { ...product, quantity: count }
+    addProductInCart(productCart)
+  }
     
-    useEffect( () => {
-      setLoading(true)
-
-      getProduct(idProduct)
-        .then((data) => setProduct(data))
-        .finally(() => setLoading(false))
-    },[idProduct]) 
-    useEffect( ()=> {
+  useEffect( () => {
     setLoading(true)
-
     getProduct(idProduct)
-      .then((data)=> setProduct(data) )
-      .finally(()=> setLoading(false))
-  }, [idProduct] )
- 
+      .then((data) => setProduct(data))
+      .finally(() => setLoading(false))
+  },[idProduct]) 
+
 
   return (
     <>
