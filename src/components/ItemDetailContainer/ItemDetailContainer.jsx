@@ -7,6 +7,7 @@ import { CartContext } from "../../context/CartContext.jsx"
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({})
+  const [hideItemCount, setHideItemCount] = useState(false)
   const { addProductInCart } = useContext(CartContext)
   const [loading, setLoading] = useState(true)
   const { idProduct } = useParams()
@@ -14,8 +15,11 @@ const ItemDetailContainer = () => {
   const addProduct = (count) => {
     const productCart = { ...product, quantity: count }
     addProductInCart(productCart)
+    setHideItemCount(true)
   }
     
+
+
   useEffect( () => {
     setLoading(true)
     getProduct(idProduct)
@@ -27,7 +31,7 @@ const ItemDetailContainer = () => {
   return (
     <>
     {
-      loading ? <div>Cargado... </div> :  <ItemDetail product={product} addProduct={addProduct} />
+      loading ? <div>Cargado... </div> :  <ItemDetail product={product} addProduct={addProduct} hideItemCount={hideItemCount} />
     }
     </>
   )

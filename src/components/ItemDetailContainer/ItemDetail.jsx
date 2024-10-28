@@ -1,9 +1,10 @@
 import Back from "./Back"
+import { Link } from "react-router-dom"
 import ItemCount from "../ItemCount/ItemCount"
 import { useState } from "react"
 import './itemdetail.css'
 
-const ItemDetail = ({ product, addProduct }) => {
+const ItemDetail = ({ product, addProduct, hideItemCount }) => {
   const [currentImage, setCurrentImage] = useState(product.image[0])
 
   const images = product.image.filter( (image) => image !== currentImage )
@@ -27,7 +28,13 @@ const ItemDetail = ({ product, addProduct }) => {
         <h2 className="nombre">{product.name}</h2>
         <p className="price">Precio: ${product.price}</p>
         <p className="descripcion">{product.description}</p>
-        <ItemCount stock={product.stock} addProduct={addProduct} />
+        {
+          hideItemCount === true ? (
+            <Link to="/cart" >Ir al carrito </Link>
+          ) : (
+            <ItemCount stock={product.stock} addProduct={addProduct} />
+          )
+        }
       </div>   
     </div>
   )

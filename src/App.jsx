@@ -5,7 +5,6 @@ import Form from './components/Form/Form'
 import { CartProvider } from './context/CartContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom' 
 import Cart from './components/Cart/Cart'
-import Banner from './components/Banner/Banner'
 import './App.css'
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
       <BrowserRouter>
         <CartProvider>
           <NavBar/>
-          <Banner/>
           <Routes>
             <Route path='/' element={ <ItemListContainerWithHoc/> } />
             <Route path='/category/:idCategory' element={ <ItemListContainerWithHoc/> } />

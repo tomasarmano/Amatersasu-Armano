@@ -1,16 +1,17 @@
 import ItemList from "./itemList"
 import hocFilterProducts from "../../hoc/hocFilterProducts"
+import Banner from "../Banner/Banner"
 import "./itemlistcontainer.css"
 
 const ItemListContainer = ({ products }) => {
 
   return (
-    <div className="itemlistcontainer">
-      {
-        <ItemList products={products}/>
-      }
-
-    </div>
+    <> 
+    <Banner className="banner"/>
+        <div className="itemlistcontainer">
+          {<ItemList products={products}/>}
+        </div>
+    </> 
   )
 }
 

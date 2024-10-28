@@ -1,7 +1,7 @@
 .contador{
-    width: 200px;
-    display: flex;
-    flex-direction: column;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
 }
 .contador .agregar-eliminar{
   display: flex;
@@ -22,8 +22,8 @@
   cursor: pointer;
 }
 .agregar-eliminar .menos:hover{
-    border: 1px solid #cc2e2e;
-    cursor: pointer;
+  border: 1px solid #cc2e2e;
+  cursor: pointer;
   }
 .agregar-eliminar p{
   font-weight: bold;

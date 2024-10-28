@@ -10,8 +10,8 @@ const Cart = () => {
   if( cart.length === 0 ){
     return(
       <div className="empty-cart">
-        <h2 className="title-empty-cart">El carrito esta vacio</h2>
-        <Link to="/" className="button-home-empty-cart" >Volver al inicio</Link>
+        <h2 className="title">El carrito esta vacio</h2>
+        <Link to="/" className="button-home" >Volver al inicio</Link>
       </div>
     )
   }
@@ -22,14 +22,18 @@ const Cart = () => {
       {
         cart.map( (productCart) => (
           <div className="item-cart" key={productCart.id}>
-            <img className="img-cart" src={productCart.image} width={100} alt="" />
-            <p className="text-cart">{productCart.name}</p>
-            <p className="text-cart">precio c/u: ${productCart.price}</p>
-            <p className="text-cart">cantidad: {productCart.quantity}</p>
-            <p className="text-cart">precio parcial: ${ productCart.price * productCart.quantity } </p>
-            <button className="delete-cart" onClick={ () => deleteProductInCart(productCart.id) } >
-              <BsFillTrash3Fill />
-            </button>
+            <div className="imgcontainer">  
+              <img className="img-cart" src={productCart.image[0]} alt="" />
+            </div>
+            <div className="detail-cart">  
+              <p className="name-cart">{productCart.name}</p>
+              <p className="price-cart">precio c/u: ${productCart.price}</p>
+              <p className="quant-cart">cantidad: {productCart.quantity}</p>
+              <p className="totalprice-cart">precio total: ${ productCart.price * productCart.quantity } </p>
+              <button className="delete-cart" onClick={ () => deleteProductInCart(productCart.id) } >
+                <BsFillTrash3Fill />
+              </button>
+            </div>
           </div>
         ))
       }
@@ -37,6 +41,7 @@ const Cart = () => {
       <div className="info-cart">
         <p className="text-info-cart">Precio total: ${totalPrice()}</p>
         <button className="button-delete-cart" onClick={deleteCart} >Vaciar carrito</button>
+        <Link to="/" className="button-back-cart">Ver otros productos</Link>
       </div>
     </div>
   )

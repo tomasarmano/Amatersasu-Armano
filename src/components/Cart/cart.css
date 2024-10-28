@@ -1,0 +1,107 @@
+.empty-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+.empty-cart .title{
+    padding-bottom: 10px;
+    font-size: 35px;
+}
+.empty-cart .button-home{
+    font-size: 20px;
+    color: #ff0000;
+}
+
+.cart{
+    display: flex;
+    flex-direction: column;
+}
+.cart .title-cart{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 800;
+}
+.cart .item-cart{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+.cart .imgcontainer{
+    display: flex;
+    width: 25%;  
+    padding-bottom: 20px;
+    padding-left: 15px;
+}
+.cart .imgcontainer .img-cart{
+    width: 80%;
+}
+.cart .imgcontainer .img-cart img{
+    width: 150px;
+}
+.cart .detail-cart .name-cart{
+    padding-bottom: 15px;
+    font-size: 30px;
+    font-weight: 650;
+}
+.cart .detail-cart .price-cart{
+    display: flex;
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.cart .detail-cart .quant-cart{
+    display: flex;
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.cart .detail-cart .totalprice-cart{
+    display: flex;
+    padding-bottom: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.cart .detail-cart .delete-cart{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(42, 42, 42);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+}
+.cart .detail-cart .delete-cart:hover{
+    border: 1px solid #cc2e2e;
+    cursor: pointer;
+}
+.info-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.info-cart .text-info-cart{
+    font-size: 40px;
+    font-weight: 800;
+    padding-bottom: 10px;
+}
+.info-cart .button-delete-cart{
+    width: 90px;
+    height: 40px;
+    background-color: rgb(42, 42, 42);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+}
+.info-cart .button-delete-cart:hover{
+    border: 1px solid #cc2e2e;
+    cursor: pointer;
+}
+.info-cart .button-back-cart{
+    padding-top: 15px;
+    font-size: 18px;
+    color: #ff0000;
+}
