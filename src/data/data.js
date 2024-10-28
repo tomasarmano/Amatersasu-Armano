@@ -95,7 +95,7 @@ const getProducts = () => {
     return new Promise ((resolve, reject) => {
         setTimeout( () =>{
             resolve(products)
-        }, 500)
+        }, )
     })
 }
 
@@ -104,7 +104,7 @@ const getProduct = (idProduct) => {
         setTimeout( () =>{
             const product = products.find( (product) => product.id === idProduct )
             resolve(product)
-        }, 500)
+        }, )
     })
 }
 
