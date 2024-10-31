@@ -18,18 +18,24 @@ const ItemDetailContainer = () => {
     setHideItemCount(true)
   }
     
-  const getProduct = () => {
-    const docRef = doc( db, "products", idProduct )
-    getDoc(docRef)
-      .then((dataDb)=> {
-        const productDb = { id: dataDb.id, ...dataDb.data() }
-        setProduct(productDb)
-      })
-  }
+  const getProduct = async () => {
+    try {
+      const docRef = doc(db, "products", idProduct);
+      const dataDb = await getDoc(docRef);
+      const productDb = { id: dataDb.id, ...dataDb.data() };
+      setProduct(productDb);
+    } catch (error) {
+      console.error('Error al obtener el producto:', error);
+    }
+  };
 
-  useEffect( () => {
-    getProduct()
-  },[idProduct]) 
+  
+  useEffect(() => {
+    getProduct();
+  }, [idProduct]);
+  if (!product || Object.keys(product).length === 0) {
+    return <p>Cargando...</p>;
+  }
 
 
   return (

@@ -5,6 +5,10 @@ import { useState } from "react"
 import './itemdetail.css'
 
 const ItemDetail = ({ product, addProduct, hideItemCount }) => {
+  if (!product || !product.image || product.image.length === 0) {
+    return <p>Cargando...</p>; 
+}
+
   const [currentImage, setCurrentImage] = useState(product.image[0])
 
   const images = product.image.filter( (image) => image !== currentImage )
@@ -30,7 +34,7 @@ const ItemDetail = ({ product, addProduct, hideItemCount }) => {
         <p className="descripcion">{product.description}</p>
         {
           hideItemCount === true ? (
-            <Link to="/cart" >Ir al carrito </Link>
+            <Link to="/cart" className="go-cart" >Ir al carrito </Link>
           ) : (
             <ItemCount stock={product.stock} addProduct={addProduct} />
           )

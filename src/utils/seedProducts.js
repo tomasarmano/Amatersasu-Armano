@@ -1,3 +1,6 @@
+import db from "../db/db.js"
+import { addDoc, collection } from "firebase/firestore"
+
 const products = [
     {
         id: "osd123" ,
@@ -9,7 +12,7 @@ const products = [
         description: "Juego de acción y aventura futurista donde los jugadores luchan y exploran un mundo vibrante, desentrañando secretos y enfrentando desafiantes enemigos. ¡Prepárate para una experiencia llena de adrenalina!"
     },
     {
-        id: "mon432" ,
+        id: "mon432" ,  
         name: "Figura Monkey D. Luffy Second Gear" ,
         price: 40000 ,
         image: ["/img/luffy.jpg", "/img/luffy2.jpg", "/img/luffy3.jpg"],
@@ -91,21 +94,12 @@ const products = [
     }
 ]
 
-const getProducts = () => {
-    return new Promise ((resolve, reject) => {
-        setTimeout( () =>{
-            resolve(products)
-        }, )
+const seedProducts = () => {
+    const productsRef = collection(db, "products")
+    products.map(( {id, ...dataProduct} )=> {
+        addDoc(productsRef, dataProduct)
     })
+    return
 }
 
-const getProduct = (idProduct) => {
-    return new Promise( (resolve) => {
-        setTimeout( () =>{
-            const product = products.find( (product) => product.id === idProduct )
-            resolve(product)
-        }, )
-    })
-}
-
-export {getProducts, getProduct}
+seedProducts()

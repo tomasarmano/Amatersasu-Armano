@@ -40,8 +40,9 @@ const Cart = () => {
 
       <div className="info-cart">
         <p className="text-info-cart">Precio total: ${totalPrice()}</p>
+        <Link to="/checkout" className="button-continue">Realizar pedido</Link>  
         <button className="button-delete-cart" onClick={deleteCart} >Vaciar carrito</button>
-        <Link to="/" className="button-back-cart">Ver otros productos</Link>
+        <Link to="/" className="home">Continuar comprando</Link>
       </div>
     </div>
   )
