@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { Timestamp, addDoc, collection, setDoc, doc } from "firebase/firestore"
+import { toast } from "react-toastify"
 import FormCheckout from "./FormCheckout"
 import db from "../../db/db.js"
 import './checkout.css'
@@ -28,6 +29,7 @@ const Checkout = () => {
       setOrderId(response.id)
     })
     .finally(()=>{
+      toast.success("Gracias por su compra!!");
       updateStock()
     })
   }
