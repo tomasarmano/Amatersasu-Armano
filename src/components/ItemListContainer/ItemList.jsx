@@ -1,6 +1,6 @@
-import Item from "./item"
+import Item from "./Item"
 
-const itemList = ({ products }) => {
+const ItemList = ({ products }) => {
   return (
     <div className="itemlist">
     {
@@ -12,4 +12,4 @@ const itemList = ({ products }) => {
   )
 }
 
-export default itemList
+export default ItemList

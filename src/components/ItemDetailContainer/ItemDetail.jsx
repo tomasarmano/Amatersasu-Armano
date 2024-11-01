@@ -1,7 +1,7 @@
-import Back from "./Back"
 import { Link } from "react-router-dom"
-import ItemCount from "../ItemCount/ItemCount"
 import { useState } from "react"
+import Back from "./Back"
+import ItemCount from "../ItemCount/ItemCount"
 import './itemdetail.css'
 
 const ItemDetail = ({ product, addProduct, hideItemCount }) => {
